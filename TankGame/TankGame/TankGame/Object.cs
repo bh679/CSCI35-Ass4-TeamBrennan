@@ -93,7 +93,7 @@ namespace TankGame
 
         public virtual void Update(float dt)
         {
-            world = Matrix.CreateTranslation(position * (1/scale)) * Scale;//camera.WorldMatrix;
+            world = Matrix.CreateTranslation(position * (1 / scale)) * Scale * Matrix.CreateRotationY(MathHelper.ToRadians(rotation.Y));//camera.WorldMatrix;
         }
 
         /// <summary>

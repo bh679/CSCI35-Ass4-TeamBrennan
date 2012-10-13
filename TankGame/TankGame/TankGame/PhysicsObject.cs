@@ -32,7 +32,7 @@ namespace TankGame
 
         #endregion
 
-        public virtual void LoadContent()
+        public override void LoadContent()
         {
             defaultModel = Content.Load<Model>("glowbox");
             base.LoadContent();

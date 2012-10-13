@@ -100,14 +100,14 @@ namespace TankGame
         //player controls
         protected void MoveForward(float dt)
         {
-            Matrix transform = Matrix.CreateTranslation(Vector3.Right) * Matrix.CreateRotationY(base.rotation.Y) * base.speed * dt;
+            Matrix transform = Matrix.CreateTranslation(Vector3.Right) * base.speed * dt;
             position += transform.Translation;
             return;
         }
 
         protected void MoveBackwards(float dt)
         {
-            Matrix transform = Matrix.CreateTranslation(Vector3.Left) * Matrix.CreateRotationY(base.rotation.Y) * base.speed * dt;
+            Matrix transform = Matrix.CreateTranslation(Vector3.Left) * base.speed * dt;
             position += transform.Translation;
             return;
         }
